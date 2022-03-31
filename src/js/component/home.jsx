@@ -23,8 +23,18 @@ const Home = () => {
 	};
 
 	// Aca se agregan los tasks
-	const handleAddTask = () => {
-		if (taskVar.task.trim() != "") {
+	// const handleAddTask = () => {
+	// 	if (taskVar.task.trim() != "") {
+	// 		setTaskToDo([...taskToDo, taskVar]);
+	// 		setTaskVar(initialState);
+	// 		setError(false);
+	// 	} else {
+	// 		setError(true);
+	// 	}
+	// };
+
+	const handleAddTask = (event) => {
+		if (event.key != "Enter") {
 			setTaskToDo([...taskToDo, taskVar]);
 			setTaskVar(initialState);
 			setError(false);
@@ -32,6 +42,7 @@ const Home = () => {
 			setError(true);
 		}
 	};
+
 	// para borrar
 	const handleDelete = (id) => {
 		let newTasks = taskToDo.filter((item, index) => index != id);

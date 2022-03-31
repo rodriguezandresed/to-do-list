@@ -10,15 +10,9 @@ const ToDoList = ({ taskToDo, handleDelete }) => {
 						<li
 							key={index}
 							className="list-group-item"
-							aria-current="true">
+							onClick={() => handleDelete(index)}>
 							{item.task}
 						</li>
-						<button
-							type="button"
-							className="btn btn-danger"
-							onClick={() => handleDelete(index)}>
-							Eliminar
-						</button>
 					</div>
 				))}
 			</ul>

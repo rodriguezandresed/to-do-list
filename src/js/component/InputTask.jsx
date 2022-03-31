@@ -13,14 +13,15 @@ const InputTask = ({ taskVar, handleChangeTask, handleAddTask }) => {
 					name="task"
 					value={taskVar.task}
 					onChange={handleChangeTask}
+					onKeyUp={handleAddTask}
 				/>
 			</div>
-			<button
+			{/* <button
 				type="button"
 				className="btn btn-primary w-100 my-3"
 				onClick={handleAddTask}>
 				Guardar
-			</button>
+			</button> */}
 		</form>
 	);
 };
