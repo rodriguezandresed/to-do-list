@@ -12,8 +12,8 @@ const InputTask = ({ taskVar, handleChangeTask, handleAddTask }) => {
 					className="form-control"
 					name="task"
 					value={taskVar.task}
+					onKeyDown={handleAddTask}
 					onChange={handleChangeTask}
-					onKeyUp={handleAddTask}
 				/>
 			</div>
 			{/* <button

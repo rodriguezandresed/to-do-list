@@ -22,7 +22,7 @@ const Home = () => {
 		});
 	};
 
-	// Aca se agregan los tasks
+	// Aca se agregan los tasks en forma de boton
 	// const handleAddTask = () => {
 	// 	if (taskVar.task.trim() != "") {
 	// 		setTaskToDo([...taskToDo, taskVar]);
@@ -34,10 +34,12 @@ const Home = () => {
 	// };
 
 	const handleAddTask = (event) => {
-		if (event.key != "Enter") {
+		event.stopPropagation();
+		if (event.key === "Enter" && taskVar.task.trim() != "") {
 			setTaskToDo([...taskToDo, taskVar]);
 			setTaskVar(initialState);
 			setError(false);
+			event.preventDefault();
 		} else {
 			setError(true);
 		}
