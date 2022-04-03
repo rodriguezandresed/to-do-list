@@ -5,10 +5,9 @@ const InputTask = ({ taskVar, handleChangeTask, handleAddTask }) => {
 	return (
 		<form>
 			<div className="form-group my-3">
-				<label>Task to Do</label>
 				<input
 					type="text"
-					placeholder="Task to Do!"
+					placeholder="What needs to be done?"
 					className="form-control"
 					name="task"
 					value={taskVar.task}

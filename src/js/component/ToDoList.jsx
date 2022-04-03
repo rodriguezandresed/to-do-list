@@ -15,6 +15,9 @@ const ToDoList = ({ taskToDo, handleDelete }) => {
 						</li>
 					</div>
 				))}
+				<li className="list-group-item">
+					{taskToDo.length} items left!
+				</li>
 			</ul>
 		</div>
 	);
