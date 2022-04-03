@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const InputTask = ({ taskVar, handleChangeTask, handleAddTask }) => {
 	return (
 		<form>
-			<div className="form-group my-3">
+			<div className="form-group pt-4">
 				<input
 					type="text"
 					placeholder="What needs to be done?"
